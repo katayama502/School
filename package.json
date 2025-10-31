@@ -1,0 +1,39 @@
+{
+  "name": "crietto-portal",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext .ts,.tsx",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@tanstack/react-query": "^5.0.0",
+    "axios": "^1.6.8",
+    "i18next": "^23.0.0",
+    "monaco-editor": "^0.44.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.2",
+    "react-i18next": "^13.0.0",
+    "scratch-vm": "^0.5.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}
