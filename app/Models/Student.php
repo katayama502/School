@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Student extends Model
+{
+    use HasFactory;
+    use SoftDeletes;
+
+    protected $fillable = [
+        'user_id',
+        'display_name',
+        'grade',
+        'avatar',
+        'guardian_linked',
+    ];
+
+    protected $casts = [
+        'guardian_linked' => 'boolean',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function guardians()
+    {
+        return $this->belongsToMany(Guardian::class)->withPivot('relation')->withTimestamps();
+    }
+
+    public function submissions()
+    {
+        return $this->hasMany(Submission::class);
+    }
+
+    public function progress()
+    {
+        return $this->hasMany(Progress::class);
+    }
+}
